@@ -12,9 +12,12 @@ const app = Vue.createApp({
         toggleShowBooks(){
             this.showBooks = !this.showBooks;
         },
-        handleEvent(){
-            console.log('Event...');
-           // alert('Mouse is over box...');
+        handleEvent(event, word){
+            console.log(event, event.type);
+            
+            if(word){
+                console.log (word);
+            }
         }
     }
 });
