@@ -11,10 +11,11 @@ const app = Vue.createApp({
     methods:{
         toggleShowBooks(){
             this.showBooks = !this.showBooks;
+        },
+        handleEvent(){
+            console.log('Event...');
+           // alert('Mouse is over box...');
         }
     }
 });
 app.mount('#app');
-/*
-    Giving the user the ability to toggle wheter to show or not the book information cliking on a button
-*/
