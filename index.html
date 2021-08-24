@@ -22,7 +22,7 @@
     <div id="app">
     
         <div v-if="showBooks">
-            <p>{{t0itle}} - {{ author }} - {{ age }}</p>
+            <p>{{title}} - {{ author }} - {{ age }}</p>
         </div>
 
         <button @click="toggleShowBooks">
@@ -34,14 +34,10 @@
         <div class="box" @mouseover="handleEvent($event, 'custom argument')">Mouseover (enter) </div>
         <div class="box" @mouseleave="handleEvent">Mouseleave</div>
         <div class="box" @dblclick="handleEvent">Double Click</div>
-        <div class="box">...</div>
+        <div class="box" @mousemove="handleMousemove">Mouse Position - x:{{ x }} y:{{ y }} </div>
 
     </div>
   
     <script src="app.js"></script>
 </body>
 </html>
-
-<!--
-    We're conditionaly showing the book and conditionaly showing a different message inside the button dependent on the value of the property 'showBooks' as well 
--->
