@@ -22,9 +22,12 @@
     <div id="app">
     
         <div v-if="showBooks">
-            <p>{{ book[0].title }} - {{ book[0].author }}</p>
-            <p>{{ book[1].title }} - {{ book[1].author }}</p>
-            <p>{{ book[2].title }} - {{ book[2].author }}</p>
+            <ul>
+                <li v-for="item in books">
+                    <h3>{{ item.title }}</h3>
+                    <p> {{ item.author }} </p>
+                </li>
+            </ul>
         </div>
 
         <button @click="toggleShowBooks">
