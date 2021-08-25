@@ -41,10 +41,17 @@
 
         <div v-if="showBooks">
             <ul>
-                <li v-for="item in books" :class="{ fav:item.isFav }">
+                <li v-for="(item, index) in books" :class="{ fav:item.isFav }">
                     <img :src="item.img" :alt="item.title">
                     <h3>{{ item.title }}</h3>
                     <p> {{ item.author }} </p>
+                   <!-- Toggle favorite -->
+
+                    <button @click="toggleIsfav(index)">
+                        <span v-if="item.isFav">Unfavorite &#128148;</span> 
+                        <span v-else=>Add to Favorites &#128150;</span> 
+                    </button>
+
                 </li>
             </ul>
         </div>

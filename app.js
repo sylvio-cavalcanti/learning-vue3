@@ -15,6 +15,13 @@ const app = Vue.createApp({
         toggleShowBooks(){
             this.showBooks = !this.showBooks;
         },
+
+        toggleIsfav(index){
+            console.log('Clicked');
+           // console.log(this.books);
+            console.log(this.books[index].isFav);
+            this.books[index].isFav = !this.books[index].isFav;
+        }
     }
 });
 app.mount('#app');
